@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Quốc Bảo - Portfolio</title>
+
+    <!-- Áp dụng theme sớm để tránh nháy nền sáng khi vào chế độ tối -->
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme') ||
+                    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (t === 'dark') document.documentElement.classList.add('dark');
+            } catch (e) { }
+        })();
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER / MENU -->
+    <header class="header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <a href="#hero" class="logo">
+                QuocBao<span>.dev</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="nav-desktop">
+                <a href="#hero" class="nav-link">Trang chủ</a>
+                <a href="#about" class="nav-link">Giới thiệu</a>
+                <a href="#skills" class="nav-link">Kỹ năng</a>
+                <a href="#projects" class="nav-link">Dự án</a>
+                <a href="#contact" class="nav-link">Liên hệ</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="header-actions">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" aria-label="Toggle theme" class="icon-btn">
+                    <i id="theme-icon" class="fas fa-moon"></i>
+                </button>
+
+                <!-- Hamburger Button (Mobile) -->
+                <button id="menu-btn" aria-label="Toggle Menu" class="icon-btn mobile-only">
+                    <i id="menu-icon" class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <a href="#hero" class="mobile-nav-link">Trang chủ</a>
+            <a href="#about" class="mobile-nav-link">Giới thiệu</a>
+            <a href="#skills" class="mobile-nav-link">Kỹ năng</a>
+            <a href="#projects" class="mobile-nav-link">Dự án</a>
+            <a href="#contact" class="mobile-nav-link">Liên hệ</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section reveal">
+            <div class="container hero-container">
+                <div class="avatar-wrapper">
+                    <img src="./img/1783673483959_8566097937784933101_8566097937784933101_bdcf091a04a2ad2c9337c7d580dd867b.jpg"
+                        alt="Avatar" class="avatar-img">
+                </div>
+                <h1 class="hero-title">
+                    Xin chào, tôi là <span class="gradient-text">Nguyễn Quốc Bảo</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Lập trình viên Web năng động, chuyên phát triển ứng dụng Front-End & Back-End hiện đại, tối ưu trải
+                    nghiệm người dùng.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        Xem dự án <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        Liên hệ ngay
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about-section reveal">
+            <div class="container">
+                <h2 class="section-title">Giới Thiệu Bản Thân</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            Tôi là sinh viên ngành Cử nhân Công nghệ Thông tin tại Học viện Công nghệ Bưu chính Viễn
+                            thông
+                            (PTIT). Tôi yêu thích việc biến các ý tưởng thành các ứng dụng web thực tế có tính tương tác
+                            cao.
+                        </p>
+                        <p>
+                            Phương châm làm việc của tôi là viết code sạch, dễ bảo trì và không ngừng học hỏi các công
+                            nghệ mới để hoàn thiện bản thân mỗi ngày.
+                        </p>
+                        <div class="about-info-grid">
+                            <div><span class="info-label">Họ tên:</span> Nguyễn Quốc Bảo</div>
+                            <div><span class="info-label">Trường:</span> PTIT</div>
+                            <div><span class="info-label">Email:</span> baonq07.ptit@gmail.com</div>
+                            <div><span class="info-label">Trạng thái:</span> Sẵn sàng nhận việc</div>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <h3 class="card-title">Điểm nổi bật</h3>
+                        <ul class="highlights-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Tư duy lập trình hướng đối tượng (OOP) vững chắc.</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Thành thạo thiết kế cơ sở dữ liệu quan hệ (SQL Server, MySQL).</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Có kinh nghiệm làm việc nhóm và sử dụng Git/GitHub.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills-section reveal">
+            <div class="container">
+                <h2 class="section-title">Kỹ Năng Lập Trình</h2>
+                <div class="skills-grid">
+                    <!-- Skill Card 1 -->
+                    <div class="skill-card">
+                        <div class="skill-icon icon-blue"><i class="fas fa-code"></i></div>
+                        <h3>Front-End</h3>
+                        <div class="tags-wrapper">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Flexbox / Grid</span>
+                        </div>
+                    </div>
+                    <!-- Skill Card 2 -->
+                    <div class="skill-card">
+                        <div class="skill-icon icon-indigo"><i class="fas fa-server"></i></div>
+                        <h3>Back-End & DB</h3>
+                        <div class="tags-wrapper">
+                            <span class="skill-tag">Python (Flask)</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">SQL Server</span>
+                        </div>
+                    </div>
+                    <!-- Skill Card 3 -->
+                    <div class="skill-card">
+                        <div class="skill-icon icon-purple"><i class="fas fa-tools"></i></div>
+                        <h3>Công cụ & Khác</h3>
+                        <div class="tags-wrapper">
+                            <span class="skill-tag">Git / GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Postman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="projects-section reveal">
+            <div class="container">
+                <h2 class="section-title">Dự Án Đã Thực Hiện</h2>
+                <p class="section-subtitle">Danh sách các dự án tiêu biểu tôi đã hoàn thành</p>
+
+                <!-- Search & Filter Controls -->
+                <div class="projects-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="project-search" placeholder="Tìm kiếm dự án..."
+                            class="form-input search-input">
+                    </div>
+                    <div class="filter-buttons" id="filter-buttons">
+                        <button class="filter-btn active-filter" data-filter="all">Tất cả</button>
+                        <button class="filter-btn" data-filter="web">Web App</button>
+                        <button class="filter-btn" data-filter="database">Database</button>
+                        <button class="filter-btn" data-filter="java">Java</button>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div id="projects-grid" class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <div class="project-card" data-category="web"
+                        data-title="ziczac coffee pos management web application app">
+                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80"
+                            alt="ZicZac Coffee POS" class="project-img">
+                        <div class="project-content">
+                            <div>
+                                <span class="project-badge badge-blue">Web App</span>
+                                <h3 class="project-title">ZicZac Coffee POS</h3>
+                                <p class="project-desc">Hệ thống quản lý điểm bán hàng cho quán cà phê với giao diện
+                                    responsive và quản lý đơn hàng.</p>
+                            </div>
+                            <div class="project-techs">
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card" data-category="database"
+                        data-title="thiet ke co so du lieu quan ly cua hang quan cafe database sql">
+                        <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=600&q=80"
+                            alt="Beverage DB" class="project-img">
+                        <div class="project-content">
+                            <div>
+                                <span class="project-badge badge-indigo">Database</span>
+                                <h3 class="project-title">Beverage Store DB</h3>
+                                <p class="project-desc">Thiết kế ERD chuẩn 3NF, sơ đồ DBML và truy vấn SQL Server cho
+                                    cửa hàng nước giải khát.</p>
+                            </div>
+                            <div class="project-techs">
+                                <span class="tech-tag">SQL Server</span>
+                                <span class="tech-tag">ERD</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card" data-category="web"
+                        data-title="iu club website frontend portal student website">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
+                            alt="IU Club Website" class="project-img">
+                        <div class="project-content">
+                            <div>
+                                <span class="project-badge badge-blue">Web App</span>
+                                <h3 class="project-title">IU Club Frontend Portal</h3>
+                                <p class="project-desc">Website tuyển thành viên Gen 4 và giới thiệu các hoạt động của
+                                    câu lạc bộ tin học IU Club.</p>
+                            </div>
+                            <div class="project-techs">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="project-card" data-category="java"
+                        data-title="cau truc du lieu thuat toan java algorithm data structures stack queue tree">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80"
+                            alt="Algorithm Visualizer" class="project-img">
+                        <div class="project-content">
+                            <div>
+                                <span class="project-badge badge-purple">Java</span>
+                                <h3 class="project-title">Java DSA Solutions</h3>
+                                <p class="project-desc">Bộ giải thuật và cấu trúc dữ liệu nâng cao (Binary Tree, Stack,
+                                    Queue) tối ưu hiệu năng.</p>
+                            </div>
+                            <div class="project-techs">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">OOP</span>
+                                <span class="tech-tag">Algorithms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="no-projects" class="no-projects hidden">
+                    Không tìm thấy dự án phù hợp với từ khóa của bạn.
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section reveal">
+            <div class="container container-narrow">
+                <h2 class="section-title">Liên Hệ</h2>
+                <p class="section-subtitle">Hãy gửi tin nhắn nếu bạn muốn hợp tác hoặc trao đổi công việc!</p>
+
+                <form id="contact-form" class="contact-form" novalidate>
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <label for="name" class="form-label">Họ và tên *</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Nguyễn Văn A">
+                        <span class="error-msg hidden"></span>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="example@gmail.com">
+                        <span class="error-msg hidden"></span>
+                    </div>
+
+                    <!-- Message Field -->
+                    <div class="form-group">
+                        <div class="form-label-row">
+                            <label for="message" class="form-label">Nội dung tin nhắn *</label>
+                            <span id="char-counter" class="char-counter">0 / 200 ký tự</span>
+                        </div>
+                        <textarea id="message" name="message" rows="4" maxlength="200" class="form-input form-textarea"
+                            placeholder="Hãy nhập tin nhắn của bạn (tối thiểu 10 ký tự)..."></textarea>
+                        <span class="error-msg hidden"></span>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-full">
+                        Gửi Tin Nhắn <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; <span id="current-year"></span> Nguyễn Quốc Bảo. Tất cả quyền được bảo lưu.</p>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+
+</html>
